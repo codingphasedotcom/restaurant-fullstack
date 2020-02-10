@@ -1,0 +1,504 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);* {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#welcome {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+#welcome .welcome-menu {
+  background: white;
+  padding: 50px;
+  position: relative;
+}
+
+#welcome .welcome-menu .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .logo img {
+  max-width: 100px;
+}
+
+#welcome .welcome-menu .menu {
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .menu .menu-title {
+  text-transform: uppercase;
+  color: #0971ce;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e2eaef;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-menu .menu .links li a {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1.4rem;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+
+#welcome .welcome-menu .menu .links li a:hover {
+  color: red;
+}
+
+#welcome .welcome-menu .social-icons {
+  display: flex;
+}
+
+#welcome .welcome-menu .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c2c8cc;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#welcome .welcome-menu .location {
+  align-self: center;
+  position: absolute;
+  bottom: 100px;
+}
+
+#welcome .welcome-menu .location .address {
+  color: #7a8d99;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+#welcome .welcome-menu .location .phone-number a {
+  color: #0971ce;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#welcome .welcome-jumbo {
+  max-width: calc(100vw - 350px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ed4852;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  overflow: hidden;
+  padding: 100px;
+}
+
+#welcome .welcome-jumbo .status {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  background: black;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-jumbo h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  align-self: flex-start;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#welcome .welcome-jumbo .burger-fries {
+  width: 100%;
+  position: relative;
+}
+
+#information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100vh;
+}
+
+#information .restaurant-image {
+  overflow: hidden;
+  height: 100%;
+}
+
+#information .restaurant-image img {
+  width: 100%;
+}
+
+#information .info {
+  padding: 100px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#information .info .paragraphs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+  line-height: 1.7;
+  color: #525e66;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+#information .info .about-link {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+#information .info .about-link span {
+  margin-right: 20px;
+}
+
+#information .info .about-link .circle-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ed4852;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#information .info .about-link .circle-right .fa-chevron-right {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#food-preview {
+  background: #f4f8fb;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#food-preview h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#food-preview .button-rounded {
+  background: #ed4852;
+  color: white;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 30px;
+  margin-bottom: 130px;
+}
+
+#food-preview .container {
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+}
+
+#food-preview .container .left-btn,
+#food-preview .container .right-btn {
+  background: red;
+  color: white;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  display: inline-block;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#food-preview .container .left-btn {
+  left: -35px;
+}
+
+#food-preview .container .right-btn {
+  right: -35px;
+}
+
+#food-preview .food-slider {
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+  position: relative;
+  font-size: 0;
+}
+
+#food-preview .food-slider .sliding-system {
+  white-space: nowrap;
+  transform: translate3d(0%, 0, 0);
+}
+
+#food-preview .food-slider .slide {
+  width: 20%;
+  position: relative;
+  height: 500px;
+  cursor: pointer;
+  display: inline-block;
+  white-space: normal;
+}
+
+#food-preview .food-slider .slide:hover .background {
+  background: #f59c2e;
+  transform: translate3d(0, -200px, 0);
+}
+
+#food-preview .food-slider .slide:hover .content .food-title {
+  color: white;
+}
+
+#food-preview .food-slider .slide:hover .content .food-description {
+  color: white;
+}
+
+#food-preview .food-slider .slide .background {
+  background: white;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+#food-preview .food-slider .slide .content {
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#food-preview .food-slider .slide .content .food-title {
+  color: #ed4852;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+#food-preview .food-slider .slide .content .food-description {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #7a8d99;
+}
+
+#food-preview .food-slider .slide img {
+  width: 95%;
+  max-width: 250px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
