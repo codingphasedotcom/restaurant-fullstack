@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+@import "bootstrap.min.css";
 @import "reset";
 @import "pages/about";
 @import "home";
@@ -25,6 +27,9 @@ q:before {
     content: "";
     content: none;
 }
+p {
+    font-family: "Montserrat", sans-serif;
+}
 
 table {
     border-collapse: collapse;
@@ -36,14 +41,16 @@ body {
 }
 #app-layout {
     display: grid;
-    grid-template-columns: 350px 1fr;
+    // grid-template-columns: 350px 1fr;
     width: 100%;
     height: 100vh;
 
     .side-menu {
+        position: absolute;
         background: white;
         padding: 50px;
-        position: relative;
+        height: 100vh;
+        width: 300px;
         .logo {
             display: flex;
             justify-content: center;
@@ -114,6 +121,29 @@ body {
                 }
             }
         }
+    }
+    #content-section {
+        transform: translate3d(300px, 0, 0);
+        max-width: calc(100vw - 300px);
+        background: #ed4852; /* Old browsers */
+        background: -moz-radial-gradient(
+            center,
+            ellipse cover,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* FF3.6-15 */
+        background: -webkit-radial-gradient(
+            center,
+            ellipse cover,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(
+            ellipse at center,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        overflow: hidden;
     }
 }
 #information {
@@ -315,4 +345,143 @@ h2 {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 3rem;
+}
+//small devices
+@media (min-width: 0px) and (max-width: 767px) {
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+    #app-layout {
+        .side-menu {
+            transform: translate3d(-300px, 0, 0);
+        }
+        .welcome-jumbo {
+            width: 100%;
+            max-width: 100vw;
+            padding: 20px;
+            transform: translate3d(0, 0, 0);
+        }
+        #content-section {
+            width: 100%;
+            max-width: 100vw;
+            padding: 20px;
+            overflow-y: scroll;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    #information {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px auto;
+        .info {
+            padding: 20px;
+            .about-link {
+                span {
+                    width: 50%;
+                }
+            }
+            .paragraphs {
+                grid-template-columns: 1fr;
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    #food-preview {
+        width: 100%;
+        overflow: hidden;
+        padding: 20px;
+        .button-rounded {
+            margin-bottom: 2rem;
+        }
+        .container {
+            .left-btn {
+                left: -20px;
+            }
+            .right-btn {
+                right: -20px;
+            }
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .food-slider {
+            .slide {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    #app-layout {
+        .side-menu {
+            display: none;
+        }
+        .welcome-jumbo {
+            width: 100%;
+            max-width: 100vw;
+            padding: 20px;
+            transform: translate3d(0, 0, 0);
+        }
+        #content-section {
+            width: 100%;
+            max-width: 100vw;
+            padding: 20px;
+            overflow-y: scroll;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    #information {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px auto;
+        .info {
+            padding: 20px;
+            .about-link {
+                span {
+                    width: 50%;
+                }
+            }
+            .paragraphs {
+                grid-template-columns: 50% 50%;
+            }
+        }
+    }
+    #food-preview {
+        width: 100%;
+        overflow: hidden;
+        padding: 20px;
+        .button-rounded {
+            margin-bottom: 2rem;
+        }
+        .container {
+            .left-btn {
+                left: -20px;
+            }
+            .right-btn {
+                right: -20px;
+            }
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .food-slider {
+            .slide {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
