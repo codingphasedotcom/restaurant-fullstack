@@ -1,341 +1,59 @@
-#welcome {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    width: 100%;
-    height: 100vh;
-
-    .welcome-menu {
-        background: white;
-        padding: 50px;
-        position: relative;
-        .logo {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-            img {
-                max-width: 100px;
-            }
-        }
-        .menu {
-            margin-bottom: 50px;
-            .menu-title {
-                text-transform: uppercase;
-                color: #0971ce;
-                font-weight: 700;
-                font-size: 1.2rem;
-                border-bottom: 1px solid #e2eaef;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-            }
-            .links {
-                li {
-                    a {
-                        font-size: 1.1rem;
-                        color: black;
-                        font-weight: 700;
-                        text-decoration: none;
-                        margin-bottom: 1.4rem;
-                        display: block;
-                        transition: color 0.3s ease-in-out;
-                        &:hover {
-                            color: red;
-                        }
-                    }
-                }
-            }
-        }
-        .social-icons {
-            display: flex;
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: #c2c8cc;
-                font-size: 0.9rem;
-                text-decoration: none;
-                color: white;
-                height: 30px;
-                width: 30px;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-        }
-        .location {
-            align-self: center;
-            position: absolute;
-            bottom: 100px;
-            .address {
-                color: #7a8d99;
-                margin-bottom: 20px;
-                line-height: 1.7;
-            }
-            .phone-number {
-                a {
-                    color: #0971ce;
-                    font-size: 2rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-    .welcome-jumbo {
-        max-width: calc(100vw - 350px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: #ed4852; /* Old browsers */
-        background: -moz-radial-gradient(
-            center,
-            ellipse cover,
-            #ed4852 0%,
-            #9c1b24 100%
-        ); /* FF3.6-15 */
-        background: -webkit-radial-gradient(
-            center,
-            ellipse cover,
-            #ed4852 0%,
-            #9c1b24 100%
-        ); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(
-            ellipse at center,
-            #ed4852 0%,
-            #9c1b24 100%
-        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        overflow: hidden;
-        padding: 100px;
-        .status {
-            display: inline-block;
-            padding: 10px 15px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: white;
-            background: black;
-            border-radius: 5px;
-            align-self: flex-start;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            align-self: flex-start;
-            color: white;
-            margin-bottom: 100px;
-        }
-        .burger-fries {
-            width: 100%;
-            // max-width: 1000px;
-            // animation: moveUpandDown 1s linear infinite;
-            position: relative;
-        }
-        // @keyframes moveUpandDown {
-        //   0%, 100%{
-        //     bottom:0;
-        //   }
-        //   50%{
-        //     bottom:30px;
-        //   }
-        // }
-    }
-}
-#information {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh;
-    .restaurant-image {
-        overflow: hidden;
-        height: 100%;
-        img {
-            width: 100%;
-            // height: 500px;
-            // object-fit: cover;
-            // object-position: 0 0;
-        }
-    }
-    .info {
-        padding: 100px 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        .paragraphs {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-gap: 20px;
-            line-height: 1.7;
-            color: #525e66;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-        .about-link {
-            font-size: 1.8rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: black;
-            font-weight: 700;
-            span {
-                margin-right: 20px;
-            }
-            .circle-right {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 40px;
-                width: 40px;
-                border-radius: 50%;
-                background: #ed4852; /* Old browsers */
-                background: -moz-radial-gradient(
-                    center,
-                    ellipse cover,
-                    #ed4852 0%,
-                    #9c1b24 100%
-                ); /* FF3.6-15 */
-                background: -webkit-radial-gradient(
-                    center,
-                    ellipse cover,
-                    #ed4852 0%,
-                    #9c1b24 100%
-                ); /* Chrome10-25,Safari5.1-6 */
-                background: radial-gradient(
-                    ellipse at center,
-                    #ed4852 0%,
-                    #9c1b24 100%
-                ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                .fa-chevron-right {
-                    color: white;
-                    font-size: 1.3rem;
-                }
-            }
-        }
-    }
-}
-#food-preview {
-    background: #f4f8fb;
-    padding: 100px;
+.welcome-jumbo {
+    max-width: calc(100vw - 350px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    h2 {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    .button-rounded {
-        background: #ed4852;
-        color: white;
+    background: #ed4852; /* Old browsers */
+    background: -moz-radial-gradient(
+        center,
+        ellipse cover,
+        #ed4852 0%,
+        #9c1b24 100%
+    ); /* FF3.6-15 */
+    background: -webkit-radial-gradient(
+        center,
+        ellipse cover,
+        #ed4852 0%,
+        #9c1b24 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(
+        ellipse at center,
+        #ed4852 0%,
+        #9c1b24 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    overflow: hidden;
+    padding: 100px;
+    .status {
         display: inline-block;
-        padding: 15px;
-        border-radius: 30px;
-        margin-bottom: 130px;
-        //  width: 100px;
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+        background: black;
+        border-radius: 5px;
+        align-self: flex-start;
+        margin-bottom: 20px;
     }
-    .container {
+    h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        align-self: flex-start;
+        color: white;
+        margin-bottom: 100px;
+    }
+    .burger-fries {
         width: 100%;
-        max-width: 1400px;
+        // max-width: 1000px;
+        // animation: moveUpandDown 1s linear infinite;
         position: relative;
-
-        .left-btn,
-        .right-btn {
-            background: red;
-            color: white;
-            height: 50px;
-            width: 50px;
-            position: absolute;
-            top: calc(50% - 25px);
-            display: inline-block;
-            z-index: 5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        .left-btn {
-            left: -35px;
-        }
-        .right-btn {
-            right: -35px;
-        }
     }
-    .food-slider {
-        width: 100%;
-        max-width: 1400px;
-        // display: flex;
-        // margin-bottom: 2rem;
-        overflow: hidden;
-        position: relative;
-        font-size: 0;
-        .sliding-system {
-            white-space: nowrap;
-            transform: translate3d(-0%, 0, 0);
-        }
-        .slide {
-            width: 20%;
-            position: relative;
-            height: 500px;
-            cursor: pointer;
-            display: inline-block;
-            white-space: normal;
-            // border-right: 1px solid #e9f0f4;
-            &:hover {
-                .background {
-                    background: rgb(245, 156, 46);
-                    transform: translate3d(0, -200px, 0);
-                }
-                .content {
-                    .food-title {
-                        color: white;
-                    }
-                    .food-description {
-                        color: white;
-                    }
-                }
-            }
-            .background {
-                background: white;
-                top: 0;
-                bottom: 0;
-                height: 100%;
-                width: 100%;
-                z-index: 1;
-                position: absolute;
-                transition: transform 0.3s ease-in-out;
-            }
-            .content {
-                position: absolute;
-                z-index: 2;
-                padding: 20px;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .food-title {
-                    color: #ed4852;
-                    font-size: 2rem;
-                    font-weight: 900;
-                    margin-bottom: 3rem;
-                    // transition: all .3s ease-in-out;
-                }
-                .food-description {
-                    font-size: 0.8rem;
-                    font-weight: 400;
-                    line-height: 1.8;
-                    margin-bottom: 3rem;
-                    color: #7a8d99;
-                }
-            }
-            img {
-                width: 95%;
-                max-width: 250px;
-            }
-        }
-    }
-}
-h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
+    // @keyframes moveUpandDown {
+    //   0%, 100%{
+    //     bottom:0;
+    //   }
+    //   50%{
+    //     bottom:30px;
+    //   }
+    // }
 }
