@@ -162,11 +162,6 @@ table {
   font-weight: 500;
 }
 
-#about-page .content-box {
-  background: white;
-  padding: 20px;
-}
-
 @media (min-width: 0px) and (max-width: 767px) {
   #about-page {
     padding: 20px;
@@ -175,6 +170,154 @@ table {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #about-page {
+    padding: 20px;
+  }
+}
+
+#waitlist-page {
+  padding: 100px;
+}
+
+#waitlist-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#waitlist-page p {
+  font-size: 0.9rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+#waitlist-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#waitlist-page form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  height: auto;
+}
+
+#waitlist-page form .form-group button[type=submit] {
+  background: #9c1b24;
+  border: none;
+  padding: 20px 40px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #waitlist-page {
+    padding: 20px;
+  }
+
+  #waitlist-page h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #waitlist-page {
+    padding: 20px;
+  }
+}
+
+#offers-page {
+  padding: 100px;
+}
+
+#offers-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#offers-page p {
+  font-size: 0.9rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+#offers-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#offers-page form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  height: auto;
+}
+
+#offers-page form .form-group button[type=submit] {
+  background: #9c1b24;
+  border: none;
+  padding: 20px 40px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #offers-page {
+    padding: 20px;
+  }
+
+  #offers-page h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #offers-page {
+    padding: 20px;
+  }
+}
+
+#menu-page {
+  padding: 100px;
+}
+
+#menu-page #food-preview {
+  padding: 0;
+  background: transparent;
+}
+
+#menu-page #food-preview h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+#menu-page #food-preview .button-rounded {
+  margin-bottom: 2rem;
+}
+
+#menu-page #food-preview .right-btn,
+#menu-page #food-preview .left-btn {
+  background: black;
+}
+
+#menu-page #food-preview .food-slider .slide:hover .background {
+  background: black;
+  transform: translate3d(0, -200px, 0);
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #menu-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #menu-page {
     padding: 20px;
   }
 }
@@ -355,7 +498,6 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  overflow: hidden;
 }
 
 #information {
@@ -698,5 +840,10 @@ h2 {
   #food-preview .food-slider .slide {
     width: 50%;
   }
+}
+
+.content-box {
+  background: white;
+  padding: 20px;
 }
 

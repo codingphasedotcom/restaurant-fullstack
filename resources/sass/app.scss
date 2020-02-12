@@ -3,6 +3,9 @@
 @import "bootstrap.min.css";
 @import "reset";
 @import "pages/about";
+@import "pages/waitlist";
+@import "pages/offers";
+@import "menu/index";
 @import "home";
 
 body {
@@ -143,7 +146,7 @@ body {
             #ed4852 0%,
             #9c1b24 100%
         ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
 #information {
@@ -476,6 +479,10 @@ h2 {
             }
         }
     }
+}
+.content-box {
+    background: white;
+    padding: 20px;
 }
 
 // Large devices (desktops, 992px and up)
