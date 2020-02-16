@@ -10,43 +10,34 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Static Pages
+Route::get('/', 'StaticPagesController@home');
+Route::get('/menu', 'StaticPagesController@menu');
+Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
+Route::get('/about', 'StaticPagesController@about');
+Route::get('/waitlist', 'StaticPagesController@waitlist');
+Route::get('/contact', 'StaticPagesController@contact');
+Route::get('/offers', 'StaticPagesController@offers');
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
-Route::get('/admin/food-categories', function () {
-    return view('admin/food-categories/all');
-});
-Route::get('/admin/food-categories/create', function () {
-    return view('admin/food-categories/create');
-});
-Route::get('/admin/food-categories/{id}/edit', function () {
-    return view('admin/food-categories/edit');
-});
+// Admin Dashboard
+Route::get('/admin', 'admin\AdminController@dashboard');
+
+// Admin Food Categories
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
+
+// Admin Food Categories
+Route::get('/admin/food-items', 'admin\FoodItemsController@index');
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+
+// Admin Authentication
 Route::get('/admin/register', function () {
     return view('admin/register');
 });
 Route::get('/admin/login', function () {
     return view('admin/login');
 });
-Route::get('/menu', function () {
-    return view('menu/index');
-});
-Route::get('/menu/{slug}', function () {
-    return view('menu/single-menu');
-});
-Route::get('/about', function () {
-    return view('pages/about');
-});
-Route::get('/waitlist', function () {
-    return view('pages/waitlist');
-});
-Route::get('/contact', function () {
-    return view('pages/contact');
-});
-Route::get('/offers', function () {
-    return view('pages/offers');
-});
+
+
