@@ -17,7 +17,10 @@ class UsersController extends Controller
     }
     
     public function index(){
-        return view('admin/users/all');
+        $users = User::paginate(10);
+        return view('admin/users/all', [
+            'users' => $users
+        ]);
     }
     public function create(){
         $roles = Role::All();
