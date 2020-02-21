@@ -33,7 +33,10 @@ Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesControl
 // Admin Food Items
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::post('/admin/food-items', 'admin\FoodItemsController@store');
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 // Admin Users
 Route::get('/admin/users', 'admin\UsersController@index');
