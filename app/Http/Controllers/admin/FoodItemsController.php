@@ -60,8 +60,7 @@ class FoodItemsController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => [ 'string'],
-            'price' => ['required', 'integer'],
+            'price' => ['required'],
             'category_id' => ['required', 'integer'],
         ]);
         
