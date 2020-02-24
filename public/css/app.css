@@ -246,6 +246,11 @@ table {
   font-weight: 500;
 }
 
+#offers-page .thank-you h1,
+#offers-page .thank-you p {
+  text-align: center !important;
+}
+
 #offers-page form .form-group label {
   font-weight: 700;
   margin-bottom: 10px;
