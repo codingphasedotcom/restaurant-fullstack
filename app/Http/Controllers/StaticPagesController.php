@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\Member;
 use App\Reservation;
 
+
 class StaticPagesController extends Controller
 {
     public function home(){
+        
+
         return view('home');
     }
     public function about(){
