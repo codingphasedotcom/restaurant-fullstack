@@ -1,0 +1,44 @@
+#contact-page {
+    padding: 100px;
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 2.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: .5rem;
+    }
+    p {
+        font-size: 0.9rem;
+        line-height: 2;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+    iframe{
+      width: 100%;
+    }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    #contact-page {
+        padding: 20px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    #contact-page {
+        padding: 20px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

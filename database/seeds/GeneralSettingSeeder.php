@@ -15,11 +15,11 @@ class GeneralSettingSeeder extends Seeder
         DB::table('general_settings')->insert([
             'site_title' => 'Billys Burgers',
             'logo_image_url' => '/img/clipart-restaurant-restaurant-logo-5.png',
-            'address_1' => '234 Main st',
+            'address_1' => '730 NW 36th St',
             'address_2' => '',
-            'city' => 'New York',
-            'state' => 'NY',
-            'zipcode' => '11385',
+            'city' => 'Miami',
+            'state' => 'FL',
+            'zipcode' => '33127',
             'phone_number' => '347-231-4545',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()

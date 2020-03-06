@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('title')
+About - {{$settings["general"]->site_title}} 
+@endsection
+
+
+
 @section('content')
     <div id="about-page">
       
