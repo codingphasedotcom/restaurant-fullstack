@@ -724,6 +724,7 @@ body {
 #food-preview .food-slider .sliding-system {
   white-space: nowrap;
   transform: translate3d(0%, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
 
 #food-preview .food-slider .slide {
@@ -844,8 +845,17 @@ h2 {
 
   #food-preview {
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     padding: 20px;
+  }
+
+  #food-preview .food-slider .slide {
+    margin-bottom: 1rem;
+  }
+
+  #food-preview .food-slider .sliding-system {
+    white-space: normal;
+    transform: translate3d(0%, 0, 0);
   }
 
   #food-preview .button-rounded {
@@ -854,10 +864,12 @@ h2 {
 
   #food-preview .container .left-btn {
     left: -20px;
+    display: none;
   }
 
   #food-preview .container .right-btn {
     right: -20px;
+    display: none;
   }
 
   #food-preview h2 {
@@ -909,7 +921,6 @@ h2 {
 
   #food-preview {
     width: 100%;
-    overflow: hidden;
     padding: 20px;
   }
 

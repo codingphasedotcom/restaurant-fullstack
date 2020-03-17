@@ -283,6 +283,7 @@ body {
         .sliding-system {
             white-space: nowrap;
             transform: translate3d(-0%, 0, 0);
+            transition: all .3s ease-in-out;
         }
         .slide {
             width: 20%;
@@ -396,17 +397,29 @@ h2 {
     }
     #food-preview {
         width: 100%;
-        overflow: hidden;
+        overflow: auto;
         padding: 20px;
+        .food-slider{
+            .slide{
+                margin-bottom: 1rem;
+            }
+            .sliding-system {
+            white-space: normal;
+            transform: translate3d(-0%, 0, 0);
+            }
+        }
+        
         .button-rounded {
             margin-bottom: 2rem;
         }
         .container {
             .left-btn {
                 left: -20px;
+                display: none;
             }
             .right-btn {
                 right: -20px;
+                display: none;
             }
         }
         h2 {
@@ -458,7 +471,7 @@ h2 {
     }
     #food-preview {
         width: 100%;
-        overflow: hidden;
+        // overflow: auto;
         padding: 20px;
         .button-rounded {
             margin-bottom: 2rem;
@@ -486,6 +499,8 @@ h2 {
     background: white;
     padding: 20px;
 }
+
+
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199px) {
